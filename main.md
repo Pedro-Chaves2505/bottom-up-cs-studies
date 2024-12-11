@@ -4,9 +4,9 @@ Gostaria de entender como os caracteres escritos por mim são, ao final, executa
 
 Parece sempre haver uma dúvida sobre como tudo funciona de ponta a ponta(sendo o teclado uma interface que está numa das pontas externas mais próximas do usuário e o circuito em si uma das camadas mais distantes dele)
 
-Como um caractere que está em um arquivo com sua respectiva extensão, tendo sido anteriormente enviado a partir do teclado, acaba sendo executado? Como um arquivo de código de fato está na memória? Há vários blocos na memória cada qual com um caractere, por exemplo? Quando ele já está na memória, como o compilador vai efetivamente fazer com que o código passe a estar em um formato executável pela máquina? Quem compila o compilador
+Como um caractere que está em um arquivo com sua respectiva extensão, tendo sido anteriormente enviado a partir do teclado, acaba sendo executado? Como um arquivo de código de fato está na memória? Há vários blocos na memória cada qual com um caractere, por exemplo? Quando ele já está na memória, como o compilador vai efetivamente fazer com que o código passe a estar em um formato executável pela máquina? Quem compila o compilador?
 
-Se eu não me engano, havia uma função em um compilador para pegar caractere por caractere. Nesse caso, creio que era para separar as palavras por tokens. Por exemplo, se estou na linguagem Pascal e começa-se a análise de um novo token que inicia com o caractere “5”, este token não pode ser um identificador, pois os identificadores em Pascal não podem começar com algarismos. Essa parte seria a do analisador léxico, o qual, se não me engano, tem como fundamento um Autômato Finito . Esse compilador poderia já estar escrito em linguagem de máquina.
+Esse projeto busca esclarecer essas questões e muitas outras
 
 ### O processador
 
@@ -30,6 +30,8 @@ Eu imagino que primeiro deve haver um compilador já previamente escrito. A esse
 ### O compilador
 
 ### Como um compilador funciona?
+
+Se eu não me engano, havia uma função em um compilador para pegar caractere por caractere. Nesse caso, creio que era para separar as palavras por tokens. Por exemplo, se estou na linguagem Pascal e começa-se a análise de um novo token que inicia com o caractere “5”, este token não pode ser um identificador, pois os identificadores em Pascal não podem começar com algarismos. Essa parte seria a do analisador léxico, o qual, se não me engano, tem como fundamento um Autômato Finito . Esse compilador poderia já estar escrito em linguagem de máquina.
 
 ### O analisador léxico
 
