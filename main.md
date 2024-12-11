@@ -1,6 +1,23 @@
 # Entendendo a execução de um programa de computador nas suas várias camadas
 
-Gostaria de entender como os caracteres escritos por mim são, ao final, executados. Como um caractere que está em um bloco de código, tendo sido anteriormente enviado a partir do teclado, acaba sendo executado? Como um arquivo de código de fato está na memória? Há vários blocos na memória cada qual com um caractere, por exemplo? Se eu não me engano, havia uma função em um compilador para pegar caractere por caractere. Nesse caso, creio que era para separar as palavras por tokens. Por exemplo, se estou na linguagem Pascal e começa-se a análise de um novo token que inicia com o caractere “5”, este token não pode ser um identificador, pois os identificadores em Pascal não podem começar com algarismos. Essa parte seria a do analisador léxico, o qual, se não me engano, tem como fundamento um Autômato Finito . Esse compilador poderia já estar escrito em linguagem de máquina.
+Gostaria de entender como os caracteres escritos por mim são, ao final, executados. 
+
+Parece sempre haver uma dúvida sobre como tudo funciona de ponta a ponta(sendo o teclado uma interface que está numa das pontas externas mais próximas do usuário e o circuito em si uma das camadas mais distantes dele)
+
+Como um caractere que está em um arquivo com sua respectiva extensão, tendo sido anteriormente enviado a partir do teclado, acaba sendo executado? Como um arquivo de código de fato está na memória? Há vários blocos na memória cada qual com um caractere, por exemplo? Quando ele já está na memória, como o compilador vai efetivamente fazer com que o código passe a estar em um formato executável pela máquina? Quem compila o compilador
+
+Se eu não me engano, havia uma função em um compilador para pegar caractere por caractere. Nesse caso, creio que era para separar as palavras por tokens. Por exemplo, se estou na linguagem Pascal e começa-se a análise de um novo token que inicia com o caractere “5”, este token não pode ser um identificador, pois os identificadores em Pascal não podem começar com algarismos. Essa parte seria a do analisador léxico, o qual, se não me engano, tem como fundamento um Autômato Finito . Esse compilador poderia já estar escrito em linguagem de máquina.
+
+### O processador
+
+### A unidade lógica e aritmética
+
+> A ALU não é mais que um sistema combinatório com capacidade de efetuar várias operações sobre os seus operandos BARR_A e BARR_B. *Arquitetura de Computadores; José Delgado, Carlos Ribeiro; 5ª edição; seção 7.2*
+> 
+
+Como ela, de fato, realiza essas operações?
+
+*Arquitetura de Computadores; José Delgado, Carlos Ribeiro; 5ª edição; figura 7.4*. O BARR_A(barramento A) e o BARR_B(barramento B) parecem ter ambos 16 bits. Aparentemente o BARR_A está ligado a uma porta XOR(ou exclusivo). Mas, bem, a porta tem dois receptores nesse caso. Não sei ainda o que significaria esses 16 bits estarem conectados a um só dos receptores da porta. Significaria que compararia um por um com nA? Significa que estão todos em paralelo(de modo que o XOR tem 17 receptores) mas que, por conveniência, colocou como se estivessem em série 
 
 ### Supondo um arquivo de código em C, como ele estaria armazenado em memória?
 
@@ -9,6 +26,8 @@ Me refiro à organização dele. Suspeito que cada caractere esteja em um espaç
 ### Se em cada registro da memória na seção pertencente a esse arquivo conter um caractere, como eles seriam trazidos à CPU e, posteriormente, executados?
 
 Eu imagino que primeiro deve haver um compilador já previamente escrito. A esse compilador podem ser passados cada caractere do código para ser feita a análise léxico. 
+
+### O compilador
 
 ### Como um compilador funciona?
 
@@ -66,3 +85,12 @@ Deve haver a criação das estruturas de dados na memória(objetos, funções)
 ## Apendices
 
 Também há a pergunta: como esses dados de fato são postos na RAM
+
+# Plano
+
+- [ ]  Entender como funciona o computador inteiro como um sistema digital completo. Com isso me refiro a entender como o processador, por exemplo, de fato se integra com uma memória RAM, ou com um SSD em termos de sistemas digitais.
+    - [ ]  Como de fato o processador se integra com a memória RAM
+        - [ ]  Como o processador se integra com a memória RAM e SSD simultaneamente
+- [ ]  Como um processador de fato funciona
+    - [ ]  Ordem de execução das coisas
+- [ ]  Quem compila o compilador
